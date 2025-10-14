@@ -1,0 +1,13 @@
+# DSMeventos Auth Service
+
+Este é o microserviço de autenticação do sistema DSMeventos. Ele oferece endpoints para cadastro e login de usuários utilizando Node.js, Express, Prisma e MongoDB Atlas, além de documentação automática das rotas via Swagger.
+
+## Tecnologias utilizadas
+
+- Node.js
+- Express
+- Prisma ORM (com MongoDB)
+- MongoDB Atlas
+- bcryptjs (hash de senha)
+- dotenv
+- swagger-ui-express e swagger-jsdoc (documentação)
