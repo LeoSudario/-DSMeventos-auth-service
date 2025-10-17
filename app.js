@@ -2,6 +2,7 @@ const express = require("express");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
 const authRoutes = require("./src/routes/authRoutes");
+const userRoutes = require("./src/routes/userRoutes");
 
 const app = express();
 app.use(express.json());
@@ -20,6 +21,15 @@ const swaggerOptions = {
         description: "Development server",
       },
     ],
+    components: {
+      securitySchemes: {
+        bearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "JWT",
+        },
+      },
+    },
   },
   apis: ["./src/routes/*.js"],
 };
@@ -28,6 +38,7 @@ const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
 
 app.get("/", (req, res) => {
   res.json({
@@ -35,6 +46,9 @@ app.get("/", (req, res) => {
     status: "Running",
     endpoints: {
       register: "POST /auth/register",
+      login: "POST /auth/login",
+      getProfile: "GET /users/me",
+      updateProfile: "PUT /users/me",
       documentation: "GET /api-docs",
     },
   });
