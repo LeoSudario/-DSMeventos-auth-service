@@ -212,7 +212,3 @@ Este projeto faz parte da atividade Web III - DSMeventos.
 - Leonardo
 - Pedro Xavier
 - Roberta
-
----
-
-⚡ Desenvolvido com Node.js e ❤️
