@@ -206,12 +206,12 @@ Este projeto faz parte da atividade Web III - DSMeventos.
 ## 👥 Equipe 1
 
 - Daniel
-- Roberta
-- Leonardo
-- Iago
-- Pedro Xavier
-- Kaio
 - Gabriel Cintra
+- Iago
+- Kaio
+- Leonardo
+- Pedro Xavier
+- Roberta
 
 ---
 
