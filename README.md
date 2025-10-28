@@ -209,6 +209,6 @@ Este projeto faz parte da atividade Web III - DSMeventos.
 - Gabriel Cintra
 - Iago
 - Kaio
-- Leonardo
+- Leonardo Sudário
 - Pedro Xavier
 - Roberta
