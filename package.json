@@ -6,8 +6,13 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
+    "build": "prisma generate",
     "prisma:generate": "prisma generate",
     "prisma:push": "prisma db push"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
