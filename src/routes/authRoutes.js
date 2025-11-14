@@ -15,7 +15,7 @@ const router = express.Router();
  * /auth/register:
  * post:
  * summary: Register a new user
- * tags: [Auth]  // <-- CORRIGIDO (para consistência)
+ * tags: [Auth]
  * requestBody:
  * required: true
  * content:
@@ -39,9 +39,9 @@ const router = express.Router();
  * minLength: 6
  * example: "123456"
  * responses:
- * 201:
+ * '201':
  * description: User registered successfully
- * 400:
+ * '400':
  * description: Validation error
  */
 router.post("/register", authController.register);
@@ -60,20 +60,20 @@ router.post("/register", authController.register);
  * type: object
  * required:
  * - email
- * - senha  // <-- CORRIGIDO (de 'password')
+ * - senha
  * properties:
  * email:
  * type: string
  * format: email
  * description: Email do usuário
- * senha:  // <-- CORRIGIDO (de 'password')
+ * senha:
  * type: string
  * format: password
  * description: Senha do usuário
  * responses:
- * 200:
+ * '200':
  * description: Login bem-sucedido, retorna o token
- * 401:
+ * '401':
  * description: Credenciais inválidas
  */
 router.post("/login", authController.login);
